@@ -16,5 +16,6 @@ RUN mkdir /app
 RUN mkdir /app/Kitsune
 WORKDIR /app/Kitsune
 COPY --from=BUILD_IMAGE /app/Kitsune .
+RUN chmod -R 777 .
 EXPOSE 3000
 CMD yarn start
