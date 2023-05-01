@@ -10,12 +10,12 @@ RUN yarn add sharp
 RUN yarn build
 RUN rm -rf .git .gitignore .next/cache .vscode LICENSE.md README.md
 RUN node-prune node_modules
+RUN chmod -R 777 .
 
 FROM node:alpine
 RUN mkdir /app
 RUN mkdir /app/Kitsune
 WORKDIR /app/Kitsune
 COPY --from=BUILD_IMAGE /app/Kitsune .
-RUN chmod -R 777 .
 EXPOSE 3000
 CMD yarn start
