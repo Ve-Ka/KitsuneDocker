@@ -9,7 +9,7 @@ RUN find .  -type f -exec sed -i 's/\r$//' {} +
 RUN yarn install --frozen-lockfile
 RUN yarn add sharp
 RUN yarn build
-RUN rm -rf .git .gitignore .next/cache .vscode LICENSE.md README.md
+RUN rm -rf .git .gitignore .vscode LICENSE.md README.md
 RUN node-prune node_modules
 RUN chmod -R 777 .
 
