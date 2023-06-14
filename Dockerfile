@@ -19,4 +19,4 @@ RUN mkdir /app/Kitsune
 WORKDIR /app/Kitsune
 COPY --from=BUILD_IMAGE /app/Kitsune .
 EXPOSE 3000
-CMD yarn start
+CMD yarn dev
