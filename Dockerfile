@@ -4,7 +4,7 @@ RUN curl -sf https://gobinaries.com/tj/node-prune | sh
 WORKDIR /app
 RUN git clone https://github.com/Dovakiin0/Kitsune.git
 WORKDIR /app/Kitsune
-#RUN git reset --hard dcaf776
+RUN git reset --hard dcaf776
 RUN find .  -type f -exec sed -i 's/\r$//' {} +
 RUN yarn install --frozen-lockfile
 RUN yarn add sharp
