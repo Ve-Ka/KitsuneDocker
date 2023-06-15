@@ -12,7 +12,7 @@ RUN rm -rf .git .gitignore .vscode LICENSE.md README.md
 RUN node-prune node_modules
 RUN chmod -R 777 .
 
-FROM node:alpine
+FROM node:18-alpine
 RUN mkdir /app
 RUN mkdir /app/Kitsune
 WORKDIR /app/Kitsune
